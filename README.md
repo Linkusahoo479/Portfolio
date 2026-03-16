@@ -26,7 +26,7 @@
 <h4> Skills Part</h4>
  <div style="display: grid; grid-template-columns: repeat(2,1fr); gap:20px" >
 
-  <img style="width: 100%;" src="https://drive.google.com/file/d/1o6wtrIyK0cAGojIuFnUwnTd5FXMTD8sN/view?usp=drive_link" alt="">
+  <img style="width: 100%;
   
  </div>
  
