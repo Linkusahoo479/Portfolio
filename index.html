@@ -27,7 +27,7 @@
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
-            <!-- <li><a href="#services1" class="menu-btn">Resume</a></li> -->
+    
                 <li><a href="./src/Soumyaranjan_Sahoo_Resume .pdf" download="Soumyaranjan Sahoo Resume" onclick="downloadResume()">Resume</a></li> 
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
                 <li><a href="#education" class="menu-btn">Education</a></li>
@@ -41,19 +41,37 @@
             </div>
         </div>
     </nav>
-
-    <!-- home section start -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        
+    <!-- home section start 
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hi, my name is</div>
                 <div class="text-2">Soumyaranjan Sahoo</div>
-                <div class="text-3">And I'm a Java Backend Devloper</div>
-                <!-- <span class="typing"></span> -->
+               
+                 <div class="text-3">And I'm a <span class="typing"></span></div>
+                
                 <a href="./src/Soumyaranjan_Sahoo_Resume .pdf" download="Soumyaranjan Sahoo Resume" class="cont-box-f">Resume</a>
             </div>
         </div>
-    </section>
+    </section>-->
+
+                <section class="home" id="home">
+
+    <!-- Matrix Background -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="max-width">
+        <div class="home-content">
+            <div class="text-1">Hi, my name is</div>
+            <div class="text-2">Soumyaranjan Sahoo</div>
+            <div class="text-3">And I'm a <span class="typing"></span></div>
+            <a href="./src/Soumyaranjan_Sahoo_Resume .pdf" download="Soumyaranjan Sahoo Resume" class="cont-box-f">Resume</a>
+        </div>
+    </div>
+
+</section>
 
     <!-- about section start -->
     <section class="about" id="about">
@@ -367,7 +385,52 @@
 </body>
 </html>
 <script src="index.js"></script>
+<script>
+
+const canvas = document.getElementById("matrixCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const letters = "JAVA SPRING API TEST SQL AWS GIT CODE".split("");
+
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+const drops = [];
+
+for(let x = 0; x < columns; x++){
+drops[x] = 1;
+}
+
+function draw(){
+
+ctx.fillStyle = "rgba(0,0,0,0.05)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle = "#00ff9d";
+ctx.font = fontSize + "px monospace";
+
+for(let i = 0; i < drops.length; i++){
+
+const text = letters[Math.floor(Math.random()*letters.length)];
+
+ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+drops[i] = 0;
+
+drops[i]++;
+
+}
+
+}
+
+setInterval(draw,33);
+
+</script>
 <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 <script>
-  GitHubCalendar(".calendar", "raje2", { responsive: true });
+  GitHubCalendar(".calendar", "Linkusahoo479", { responsive: true });
 </script>
