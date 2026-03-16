@@ -19,7 +19,7 @@
 <h4> NavBar </h4>
  <div style="display: grid; grid-template-columns: repeat(2,1fr); gap:20px" >
 
-  <img style="width: 100%;" src="https://drive.google.com/file/d/1fuwhi08uaGcjGK6w75NzvGbkc4ljgMYj/view?usp=drive_link" alt="">
+  <img src="https://i.ibb.co/KxVHV4DR/your-image-name.png" style="width:100%; height:auto;" alt="Matrix Background">
   
  </div>
 
